@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>login</title>
+        <link rel="icon" type="image/png" href="image/p3.png" />
+        <link rel="stylesheet" type="text/css" href="css/style_cliente.css" />
+        <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="../easyrtc/easyrtc.js"></script>
+        <script type="text/javascript" src="js/numeric-1.2.6.min.js"></script>
+        <script type="text/javascript" src="../easyrtc/easyrtc_ft.js"></script>
+        <script type="text/javascript" src="js/profe3_client.min.js"></script>
+    </head>
+    <body>
+        <div class="login-form" id="popup">
+          <div id='warning'></div>
+          <div>
+            <input type="checkbox" id="broadcast_video" name="broadcast_video">
+            <label for="broadcast_video" id='label_broadcast_video'></label>
+          </div>
+          <div>
+            <input type="checkbox" id="receive_video" name="receive_video">
+            <label for="receive_video" id='label_receive_video'></label>
+          </div>
+          <div>
+            <input type="checkbox" id="symmetric_video" name="symmetric_video">
+            <label for="symmetric_video" id='label_symmetric_video'></label>
+          </div>
+          <br>
+          <form action="javascript:login()" method="POST">
+            <input type="text" id='room'>
+            <input type="text" id="username">
+            <input type="password" id='teacher_password'>
+            <input type="password" id="user_password">
+            <input type="submit"   id='submit_button'>
+          </form>
+        </div>
+    </body>
+</html>

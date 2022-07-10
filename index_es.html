@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula virtual: voz, pizarra y proyector</title>
+        <link rel="stylesheet" type="text/css" href="css/style_index.css" />
+        <link rel="icon" type="image/png" href="image/p3.png" />
+    </head>
+    <body>
+      <h1>
+        Aula virtual: voz, pizarra y proyector y muchas cosas.
+      </h1>
+      <div class='boton_lang'>
+        <img src="/image/english.png" >
+        <button class='mandos' type="button" onclick="redirection()"
+        title="">
+        </button>
+      </div>
+      <!--
+      <div id= 'twitter'>
+        <a href="https://twitter.com/profe3com?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @profe3com</a>
+      </div>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>      
+      -->
+      <br>
+      <br>
+      <div class='boton_imagen'>
+        <img src="/image/entrada_wb.png" >
+        <button class='mandos' type="button" onclick="login()"
+           title="Entrar a un aula o crearla como profesor">
+        </button>
+      </div>
+      <div class='portada'>
+        <img src="/image/quantum.png">
+      </div>
+
+      <br>
+      <br>
+      <h2>Descripción</h2>
+      <br>
+      <p>
+        <em><b>profe3</b></em> ofrece las tres herramientas fundamentales para transmitir conocimientos: 
+        voz, escritura manuscrita y proyección de documentos.
+      </p>
+      <br>
+      <p>   
+        Se puede usar para simular una clase tradicional, con los roles de profesor y alumno bien 
+        diferenciados, o para mantener una reunión colaborativa en la que el profesor
+        se transforma en un moderador que otorga los permisos para que los participantes puedan
+        intervenir ordenadamente.
+      </p>
+      <br>
+      <p>   
+        <em><b>profe3</b></em> es una aplicación web que hace uso de la tecnología 
+        <a href='https://webrtc.org/'>WebRTC</a> 
+        para el intercambio de información de forma segura y descentralizada.
+        La información intercambiada se transmite de forma segura (TLS) entre los 
+        ordenadores de los participantes sin pasar por el servidor
+        central, cuya única función es ponerlos en contacto y mantener la comunicación.
+      </p>
+      <br>
+      <p>
+        No es necesario efectuar ningún tipo de registro para usarla y el servidor no 
+        almacena ningún dato personal de los participantes. 
+        Solo se registran permanentemente
+        las direcciones IP, indispensables para poner en contacto sus ordenadores a través
+        del servidor STUN. 
+        Los nombres de las aulas, los de los usuarios y las contraseñas son 
+        volátiles (se eliminan del servidor al acabar la sesión).     
+      </p>
+      <br>
+      <br>
+      <h2>Funcionamiento</h2>
+      <br>
+      <p>
+        El rol de profesor se adquiere al crear un aula.
+        Para crearla, es necesario elegir un nombre para el aula, otro para
+        el profesor y dos contraseñas (la primera para
+        el profesor, la segunda para los alumnos). 
+      </p>
+      <br>
+      <p>
+        Para entrar como alumno a un aula ya abierta, es necesario escribir el nombre de la misma, elegir 
+        un nombre de usuario y escribir la contraseña de alumno (la que ha fijado el profesor al crearla).
+        En este caso, el campo correspondiente a la contraseña de profesor debe quedar en blanco. 
+      </p>
+      <br>
+      <p>
+        Por defecto, cada alumno solo ve la señal de la cámara del profesor 
+        y la propia. Para que cada alumno vea las señales de todos los 
+        participantes, el profesor, al crear el aula, debe  marcar la casilla'Video simerico'.
+        Esta funcionalidad debe usarse con cautela porque, al ser una aplicación descentralizada,
+        el rendimiento puede resentirse.  
+      </p>
+      <p>
+        Si en algún momento el profesor pierde la conexión, es posible recuperar su rol 
+        volviendo a entrar con las credenciales originales. 
+      </p>
+      <br>
+      <p>
+        Las funciones de la aplicación se pueden ver pasando el ratón sobre los elementos
+        gráficos.  
+        Una de las pocas funcionalidades que no está documentada de esta forma
+        es la carga de vídeos de YouTube. 
+      </p>
+      <br>
+      <p>
+        Para proyectar un vídeo es necesario conocer su identificador.
+        El identificador es la serie de caracteres que aparece después 
+        de la URL principal. Por ejemplo, en el caso de 
+         <em>https://youtu.be/44XQAUjbTwE</em>,
+         el identificador es <em>44XQAUjbTwE</em> (es posible copiar la 
+         URL completa pulsando el botón derecho del ratón sobre el vídeo). 
+      </p>
+      <br>
+      <p>   
+        Para poder cargar el vídeo en el proyector, es necesario crear un 
+        archivo vacío con el siguiente nombre: <em>referencia#identificador</em>,
+        donde <em>referencia</em> es cualquier nombre que queramos usar para 
+        reconocer el archivo en nuestro ordenador. 
+      </p>
+      <br>
+      <p>   
+        Siguiendo con el ejemplo, el nombre del archivo creado 
+        podría ser: <em>biografia_Miro#44XQAUjbTwE</em>. 
+      </p>
+      <p>   
+        Este archivo sin contenido permite cargar el vídeo
+        en el proyector como si se tratara de un PDF o de una imagen local. 
+      </p>
+      <br>
+      <p>
+        Para escribir con fluidez en la pizarra en un dispositivo no tactil, es recomendable usar
+        una tableta gráfica.  
+      </p>
+      <br>
+      <br>
+      <h2>Limitaciones</h2>
+      <br>
+      <p>
+        La conexión entre los participantes se establece a través de un servidor STUN. Si un
+        participante se encuentra detrás de un 
+        <a href=https://developer.mozilla.org/es/docs/Web/API/WebRTC_API/Protocols>enrutador simétrico</a> 
+        (algunas instituciones los utilizan),
+        no le será posible conectarse. Es muy improbale que los usuarios domésticos experimenten 
+        esta limitación.    
+      </p>
+      <br>
+      <p>
+        La aplicación está en pruebas y, en determinadas condiciones, alguna 
+        funcionalidad puede fallar. 
+      </p>
+      <br>
+      <p>
+        El funcionamiento es correcto en tabletas y móviles, aunque se recomienda una pantalla de 
+        la menos 10 pulgadas para una experiencia satisfactoria. 
+      </p>
+      <br>
+      <p>
+        Solo ha sido probada con las versiones recientes de Chrome(84), Edge(84), 
+        Firefox(79) y Android(7). Pruebas con diapositivos Apple serán bienvenidas.   
+      </p>
+      <br>
+      <br>
+      <h2>Créditos y agradecimientos</h2>
+      <br>
+      <p>
+      <em><b>profe3</b></em> está desarrollada usando el marco de trabajo 
+      <a href='https://github.com/open-easyrtc/open-easyrtc'>open-easyrtc</a>
+      sobre el entorno de ejecución 
+          <a href='https://nodejs.org/es/'>Node.js</a>. 
+        </p>
+        <br>
+        <p>
+          El suavizado de los trazos implementa código de
+          <a href='https://nick.zoic.org/art/mouse-canvas-splines/'>Nick Moore</a>
+          y la librería
+          <a href='https://github.com/sloisel/numeric'>numericjs</a>
+          de Sébastien Loisel.
+        </p>
+        <br>
+        <p>
+          La aplicación no podría haber sido desarrollado sin el soporte de 
+          los participantes de 
+          <a href='https://stackoverflow.com'>Stack Overflow</a> :).
+        </p>
+        <br>
+        <br>
+        <h2>Contacto</h2>
+        <br>
+        <p>
+        Los comentarios y sugerencias son bienvenidos. Se pueden enviar a
+        <em>contacto@profe3.com</em>. 
+      </p>
+      <br>
+      <p>
+        Si se trata de notificar un fallo de funcionamiento, será de ayuda 
+        adjuntar una copia de la salida
+        de la consola del navegador. 
+        En los tres navegadores mencionados, se puede acceder a la consola
+        pulsando simultáneamente Ctrl+Mayús+i.
+      </p>
+     <script>
+       function login(){
+         window.location = '/aula?lang=es';
+       }
+       function redirection(){
+         window.location = '/en';
+       }
+     </script>   
+
+    </body>
+</html>

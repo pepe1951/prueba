@@ -1,0 +1,223 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+#twitter{
+  text-align: center;
+}
+body, html {
+  height:100%;
+  width:100%;
+}
+
+p {
+  font-size: 100%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.boton_lang{
+  position: relative;
+  display: inline-block;
+  width: 100vw;
+  height: 10vw;
+}
+
+.boton_lang img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 10vw;
+  height: 10vw;
+}
+
+.portada{
+  position: relative;
+  display: inline-block;
+  width: 100vw;
+  height: 54vw;
+}
+
+.portada img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 80vw;
+
+}
+
+
+.boton_lang .mandos {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 0px;
+  width: 10vw;
+  height: 10vw;
+  outline: 0;
+}
+
+.boton_lang .mandos:hover {
+  background-color: transparent;
+}
+
+
+
+.boton_imagen{
+  position: relative;
+  display: inline-block;
+  width: 100vw;
+  height: 37vw;
+}
+
+.boton_imagen img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 25vw;
+  height: 37vw;
+}
+
+.boton_imagen .mandos {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 0px;
+  width: 25vw;
+  height: 37vw;
+  outline: 0;
+}
+
+.boton_imagen .mandos:hover {
+  background-color: transparent;
+}
+
+@media only screen and (min-width: 768px) {
+  p {
+    font-size: 150%;
+  }
+  .boton_lang{
+    position: relative;
+    display: inline-block;
+    width: 100vw;
+    height: 4vw;
+  }
+  
+  .boton_lang img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 4vw;
+    height: 4vw;
+  }
+  
+  .portada{
+    position: relative;
+    display: inline-block;
+    width: 100vw;
+    height: 40vw;
+  }
+  
+  .portada img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 60vw;
+
+  }
+
+  .boton_lang .mandos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+    width: 4vw;
+    height: 4vw;
+    outline: 0;
+  }
+  
+  .boton_lang .mandos:hover {
+    background-color: transparent;
+  }
+  .boton_imagen{
+    position: relative;
+    display: inline-block;
+    width: 100vw;
+    height: 14.8vw;
+  }
+  
+  .boton_imagen img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 10vw;
+    height: 14.8vw;
+  }
+  
+  .boton_imagen .mandos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+    width: 10vw;
+    height: 14.8vw;
+    outline: 0;
+  }
+  
+  .boton_imagen .mandos:hover {
+    background-color: transparent;
+  }
+}
+
+
+
+h1 {
+  text-align: center;
+}
+h2 {
+  margin-left: 2%;
+}
+/*
+button {
+  font-size: 200%;
+}
+*/
